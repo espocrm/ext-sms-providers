@@ -71,17 +71,6 @@ Command:
 ```
 node build --copy
 ```
-
-### Running after-install script
-
-AfterInstall.php will be applied for EspoCRM instance.
-
-Command:
-
-```
-node build --after-install
-```
-
 ### Extension package building
 
 Command:
@@ -100,59 +89,6 @@ Note: The version number is taken from `package.json`.
 2. Run `node build --copy`.
 3. Test changes in EspoCRM instance at `site` dir.
 
-## Versioning
-
-The version number is stored in `package.json` and `package-lock.json`.
-
-Bumping version:
-
-```
-npm version patch
-npm version minor
-npm version major
-```
-
-## Tests
-
-Prepare:
-
-1. `node build --copy`
-2. `cd site`
-3. `grunt test`
-
-### Unit
-
-Command to run unit tests:
-
-```
-vendor/bin/phpunit tests/unit/Espo/Modules/SmsProviders
-```
-
-### Integration
-
-You need to create a config file `tests/integration/config.php`:
-
-```php
-<?php
-
-return [
-    'database' => [
-        'driver' => 'pdo_mysql',
-        'host' => 'localhost',
-        'charset' => 'utf8mb4',
-        'dbname' => 'TEST_DB_NAME',
-        'user' => 'YOUR_DB_USER',
-        'password' => 'YOUR_DB_PASSWORD',
-    ],
-];
-```
-The file should exist before you run `node build --copy`.
-
-Command to run integration tests:
-
-```
-vendor/bin/phpunit tests/integration/Espo/Modules/SmsProviders
-```
 
 ## Configuring IDE
 
