@@ -1,12 +1,12 @@
 {
-    "module": "{@name}",
-    "name": "{@nameLabel}",
-    "description": "{@description}",
-    "author": "{@author}",
+    "module": "SmsProviders",
+    "name": "SMS Providers",
+    "description": "SMS Providers.",
+    "author": "EspoCRM",
     "acceptableVersions": [
-        ">=5.9.0"
+        ">=7.0.0"
     ],
     "php": [
-        ">=7.2"
+        ">=7.3"
     ]
 }

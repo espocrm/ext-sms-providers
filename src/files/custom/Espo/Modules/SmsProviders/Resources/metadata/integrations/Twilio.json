@@ -1,0 +1,15 @@
+{
+    "view": "views/admin/integrations/edit",
+    "fields": {
+        "twilioAccountSid": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true
+        },
+        "twilioAuthToken": {
+            "type": "password",
+            "maxLength": 100,
+            "required": true
+        }
+    }
+}

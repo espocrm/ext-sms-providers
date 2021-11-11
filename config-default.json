@@ -8,7 +8,7 @@
         "host": "localhost",
         "port": "",
         "charset": "utf8mb4",
-        "dbname": "ext-{@nameHyphen}",
+        "dbname": "ext-sms-providers",
         "user": "root",
         "password": ""
     },
@@ -16,7 +16,7 @@
         "language": "en_US",
         "defaultOwner": "www-data",
         "defaultGroup": "www-data",
-        "siteUrl": "http://localhost/ext-{@nameHyphen}/site",
+        "siteUrl": "http://localhost/ext-s-m-s-providers/site",
         "adminUsername": "admin",
         "adminPassword": "1"
     }

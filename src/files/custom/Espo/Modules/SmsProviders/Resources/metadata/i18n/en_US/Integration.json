@@ -1,0 +1,7 @@
+{
+    "fields": {
+        "twilioAccountSid": "Account SID",
+        "twilioAuthToken": "Auth Token",
+        "twilioBaseUrl": "Base URL"
+    }
+}
