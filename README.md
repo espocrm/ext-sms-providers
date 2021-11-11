@@ -5,7 +5,7 @@ An installable extension.
 
 ## Supported SMS Providers
 
-* Twillio
+* Twilio
 
 
 ## Configuration
