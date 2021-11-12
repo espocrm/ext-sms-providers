@@ -6,6 +6,7 @@ An installable extension.
 ## Supported SMS Providers
 
 * Twilio
+* Spryng
 
 ## Setting up
 
