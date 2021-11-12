@@ -1,5 +1,8 @@
 {
     "Twilio": {
         "senderClassName": "Espo\\Modules\\SmsProviders\\Twilio\\TwilioSender"
+    },
+    "Spryng": {
+        "senderClassName": "Espo\\Modules\\SmsProviders\\Spryng\\SpryngSender"
     }
 }

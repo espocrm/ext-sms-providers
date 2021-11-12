@@ -2,6 +2,11 @@
     "fields": {
         "twilioAccountSid": "Account SID",
         "twilioAuthToken": "Auth Token",
-        "twilioBaseUrl": "Base URL"
+        "twilioBaseUrl": "Base URL",
+        "spryngAuthToken": "Auth Token",
+        "spryngBaseUrl": "Base URL",
+        "spryngOriginator": "Originator",
+        "spryngRoute": "Route",
+        "spryngEncoding": "Encoding"
     }
 }

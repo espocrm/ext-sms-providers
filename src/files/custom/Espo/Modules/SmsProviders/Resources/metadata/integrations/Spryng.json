@@ -1,0 +1,34 @@
+{
+    "view": "views/admin/integrations/edit",
+    "fields": {
+        "spryngAuthToken": {
+            "type": "password",
+            "maxLength": 100,
+            "required": true
+        },
+        "spryngBaseUrl": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true,
+            "default": "https://rest.spryngsms.com/v1"
+        },
+        "spryngOriginator": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true,
+            "default": "espoCRM"
+        },
+        "spryngEncoding": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true,
+            "default": "auto"
+        },
+        "spryngRoute": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true,
+            "default": "business"
+        }
+    }
+}
