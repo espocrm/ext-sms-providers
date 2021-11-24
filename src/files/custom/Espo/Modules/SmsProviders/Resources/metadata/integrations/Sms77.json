@@ -1,0 +1,16 @@
+{
+    "view": "views/admin/integrations/edit",
+    "fields": {
+        "sms77ApiKey": {
+            "type": "varchar",
+            "maxLength": 64,
+            "required": true
+        },
+        "sms77From": {
+            "type": "varchar",
+            "maxLength": 16,
+            "required": false,
+            "default": "espoCRM"
+        }
+    }
+}
