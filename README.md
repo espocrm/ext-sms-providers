@@ -7,6 +7,7 @@ An installable extension.
 
 * Twilio
 * Spryng
+* sms77
 
 ## Setting up
 
