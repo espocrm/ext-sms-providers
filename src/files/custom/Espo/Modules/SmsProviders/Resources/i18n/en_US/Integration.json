@@ -7,6 +7,8 @@
         "spryngBaseUrl": "Base URL",
         "spryngOriginator": "Originator",
         "spryngRoute": "Route",
-        "spryngEncoding": "Encoding"
+        "spryngEncoding": "Encoding",
+        "sms77ApiKey": "API Key",
+        "sms77From": "From"
     }
 }

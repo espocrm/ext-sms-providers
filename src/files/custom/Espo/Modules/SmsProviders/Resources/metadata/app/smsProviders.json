@@ -4,5 +4,8 @@
     },
     "Spryng": {
         "senderClassName": "Espo\\Modules\\SmsProviders\\Spryng\\SpryngSender"
+    },
+    "Sms77": {
+        "senderClassName": "Espo\\Modules\\SmsProviders\\Sms77\\Sms77Sender"
     }
 }
