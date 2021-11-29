@@ -1,0 +1,39 @@
+{
+    "view": "views/admin/integrations/edit",
+    "fields": {
+        "smstoolClientId": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true,
+            "default": "Not used."
+        },
+        "smstoolClientSecret": {
+            "type": "password",
+            "maxLength": 100,
+            "required": true
+        },
+        "smstoolBaseUrl": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true,
+            "default": "https://api.smsgatewayapi.com/v1"
+        },
+        "smstoolSender": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true,
+            "default": "espoCRM"
+        },
+        "smstoolReference": {
+            "type": "varchar",
+            "maxLength": 75,
+            "required": false,
+            "default": "auto"
+        },
+        "smstoolTest": {
+            "type": "bool",
+            "required": true,
+            "default": false
+        }
+    }
+}

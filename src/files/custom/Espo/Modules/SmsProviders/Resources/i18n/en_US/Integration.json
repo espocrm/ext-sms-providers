@@ -9,6 +9,12 @@
         "spryngRoute": "Route",
         "spryngEncoding": "Encoding",
         "sms77ApiKey": "API Key",
-        "sms77From": "From"
+        "sms77From": "From",
+        "smstoolClientId": "Client ID",
+        "smstoolClientSecret": "Client Secret",
+        "smstoolBaseUrl": "Base URL",
+        "smstoolSender": "Sender Name",
+        "smstoolReference": "Reference",
+        "smstoolTest": "Test"
     }
 }

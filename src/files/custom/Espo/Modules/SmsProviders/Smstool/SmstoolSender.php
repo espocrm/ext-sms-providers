@@ -27,7 +27,7 @@
  * these Appropriate Legal Notices must retain the display of the "EspoCRM" word.
  ************************************************************************/
 
-namespace Espo\Modules\SmsProviders\Spryng;
+namespace Espo\Modules\SmsProviders\Smstool;
 
 use Espo\Core\Sms\Sender;
 use Espo\Core\Sms\Sms;
@@ -43,9 +43,9 @@ use Espo\Entities\Integration;
 
 use Throwable;
 
-class SpryngSender implements Sender
+class SmstoolSender implements Sender
 {
-    private const BASE_URL = 'https://rest.spryngsms.com/v1';
+    private const BASE_URL = 'https://api.smsgatewayapi.com/v1';
 
     private const TIMEOUT = 10;
 
@@ -79,43 +79,51 @@ class SpryngSender implements Sender
     {
         $integration = $this->getIntegrationEntity();
 
-        $authToken = $integration->get('spryngAuthToken');
+        $clientId = $integration->get('smstoolClientId');
+        $clientSecret = $integration->get('smstoolClientSecret');
         $baseUrl = rtrim(
-            $integration->get('apiBaseUrl') ??
-            $this->config->get('spryngApiBaseUrl') ??
+            $integration->get('smstoolBaseUrl') ??
+            $this->config->get('smstoolBaseUrl') ??
             self::BASE_URL
         );
+        
+        $sender = $integration->get('smstoolSender');
+        $reference = $integration->get('smstoolReference');
+        $test = $integration->get('smstoolTest');
 
-        $encoding = $integration->get('spryngEncoding');
-        $originator = $integration->get('spryngOriginator');
-        $route = $integration->get('spryngRoute');
+        $timeout = $this->config->get('smstoolSmsSendTimeout') ?? self::TIMEOUT;
 
-        $timeout = $this->config->get('spryngSmsSendTimeout') ?? self::TIMEOUT;
+        if (!$clientId) {
+            throw new Error("No Smstool(s) Client Id.");
+        }
 
-        if (!$authToken) {
-            throw new Error("No Spryng Auth Token.");
+        if (!$clientSecret) {
+            throw new Error("No Smstool(s) Client Secret.");
         }
 
         if (!$toNumber) {
             throw new Error("No recipient phone number.");
         }
 
-        $url = $baseUrl . '/messages';
+        $url = $baseUrl . '/message/send';
 
         $data = [
-            'encoding' => $encoding,
-            'route' => $route,
-            'originator' => $originator,
-            'body' => $sms->getBody(),
-            'recipients' => [self::formatNumber($toNumber)],
+            'client_id' => $clientId,
+            'client_secret' => $clientSecret,
+            'sender' => $sender,
+            'reference' => $reference,
+            'test' => $test,
+            'message' => $sms->getBody(),
+            'to' => self::formatNumber($toNumber),
         ];
 
         $headers = [
-            'Authorization: Bearer ' . $authToken,
+            "X-Client-Id: " .$clientId,
+            "X-Client-Secret: " .$clientSecret,
             'Content-Type: application/json',
             'Accept: application/json',
         ];
-
+    
         $ch = curl_init();
 
         curl_setopt($ch, \CURLOPT_URL, $url);
@@ -141,7 +149,7 @@ class SpryngSender implements Sender
 
         if ($error) {
             if (in_array($error, [\CURLE_OPERATION_TIMEDOUT, \CURLE_OPERATION_TIMEOUTED])) {
-                throw new Error("Spryng SMS sending timeout.");
+                throw new Error("Smstool(s) SMS sending timeout.");
             }
         }
     }
@@ -168,19 +176,19 @@ class SpryngSender implements Sender
         }
 
         if ($message) {
-            $this->log->error("Spryng SMS sending error. Message: " . $message);
+            $this->log->error("Smstool(s) SMS sending error. Message: " . $message);
         }
 
-        throw new Error("Spryng SMS sending error. Code: {$code}.");
+        throw new Error("Smstool(s) SMS sending error. Code: {$code}.");
     }
 
     private function getIntegrationEntity(): Integration
     {
         $entity = $this->entityManager
-            ->getEntity(Integration::ENTITY_TYPE, 'Spryng');
+            ->getEntity(Integration::ENTITY_TYPE, 'Smstool');
 
         if (!$entity || !$entity->get('enabled')) {
-            throw new Error("Spryng integration is not enabled");
+            throw new Error("Smstool(s) integration is not enabled");
         }
 
         return $entity;
