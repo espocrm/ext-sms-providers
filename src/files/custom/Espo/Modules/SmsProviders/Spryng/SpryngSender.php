@@ -127,8 +127,6 @@ class SpryngSender implements Sender
         curl_setopt($ch, \CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, \CURLOPT_POSTFIELDS, $this->buildQuery($data));
 
-        $GLOBALS['log']->warning(json_encode( $this->buildQuery($data)) );
-
         $response = curl_exec($ch);
         $code = curl_getinfo($ch, \CURLINFO_HTTP_CODE);
         $error = curl_errno($ch);
@@ -150,7 +148,7 @@ class SpryngSender implements Sender
 
     private function buildQuery(array $data): string
     {
-        return json_encode($data);
+        return Json::encode($data);
     }
 
     private static function formatNumber(string $number): string
