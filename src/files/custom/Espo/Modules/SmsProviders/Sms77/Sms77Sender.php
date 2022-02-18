@@ -1,9 +1,8 @@
 <?php
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of SMS Providers extension for EspoCRM.
  *
- * EspoCRM - Open Source CRM application.
- * Copyright (C) 2014-2021 Yurii Kuznietsov, Taras Machyshyn, Oleksii Avramenko
+ * Copyright (C) 2014-2022 Yurii Kuznietsov, Taras Machyshyn, Oleksii Avramenko
  * Website: https://www.espocrm.com
  *
  * EspoCRM is free software: you can redistribute it and/or modify
