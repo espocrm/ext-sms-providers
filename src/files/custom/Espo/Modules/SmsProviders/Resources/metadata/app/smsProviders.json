@@ -10,5 +10,8 @@
     },
     "Smstools": {
         "senderClassName": "Espo\\Modules\\SmsProviders\\Smstools\\SmstoolsSender"
+    },
+    "SerwerSms": {
+        "senderClassName": "Espo\\Modules\\SmsProviders\\SerwerSms\\SerwerSmsSender"
     }
 }
