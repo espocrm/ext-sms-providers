@@ -9,6 +9,7 @@ An installable extension.
 * Spryng
 * sms77
 * smstools
+* SerwerSms [(API Documentation)](https://dev.serwersms.pl/en/https-api-v2/introduction)
 
 ## Setting up
 

@@ -15,6 +15,11 @@
         "smstoolsBaseUrl": "Base URL",
         "smstoolsSender": "Sender Name",
         "smstoolsReference": "Reference",
-        "smstoolsTest": "Test"
+        "smstoolsTest": "Test",
+        "serwerSmsUsername": "Username",
+        "serwerSmsPassword": "Password",
+        "serwerSmsBaseUrl": "Base URL",
+        "serwerSmsSender": "Sender Name",
+        "serwerSmsTest": "Test"
     }
 }
