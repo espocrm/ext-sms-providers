@@ -20,6 +20,10 @@
         "serwerSmsPassword": "Password",
         "serwerSmsBaseUrl": "Base URL",
         "serwerSmsSender": "Sender Name",
-        "serwerSmsTest": "Test"
+        "serwerSmsTest": "Test",
+        "playSmsBaseUrl": "Base URL",
+        "playSmsUsername": "Username",
+        "playSmsWebservicesToken": "Webservices Token",
+        "playSmsNumberPrefix": "Prefix to add in front of the phonenumber"
     }
 }

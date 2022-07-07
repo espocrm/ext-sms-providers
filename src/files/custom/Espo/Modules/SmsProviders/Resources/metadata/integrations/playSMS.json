@@ -1,0 +1,25 @@
+{
+    "view": "views/admin/integrations/edit",
+    "fields": {
+        "playSmsBaseUrl": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true
+        },
+        "playSmsUsername": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true
+        },
+        "playSmsWebservicesToken": {
+            "type": "password",
+            "maxLength": 100,
+            "required": true
+        },
+        "playSmsNumberPrefix": {
+            "type": "varchar",
+            "maxLength": 20,
+            "required": false
+        }
+    }
+}
