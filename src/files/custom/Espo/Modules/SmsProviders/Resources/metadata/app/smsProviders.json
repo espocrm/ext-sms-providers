@@ -15,6 +15,6 @@
         "senderClassName": "Espo\\Modules\\SmsProviders\\SerwerSms\\SerwerSmsSender"
     },
     "playSMS": {
-        "senderClassName": "Espo\\Modules\\SmsProviders\\playSMS\\playSmsSender"
+        "senderClassName": "Espo\\Modules\\SmsProviders\\playSMS\\PlaySmsSender"
     }
 }

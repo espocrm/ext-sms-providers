@@ -43,10 +43,8 @@ use Espo\Entities\Integration;
 
 use Throwable;
 
-class playSmsSender implements Sender
+class PlaySmsSender implements Sender
 {
-    private const BASE_URL = 'https://sms.ednt.de';
-
     private const TIMEOUT = 10;
 
     private $config;
@@ -81,11 +79,7 @@ class playSmsSender implements Sender
 
         $username = $integration->get('playSmsUsername');
         $webservicesToken = $integration->get('playSmsWebservicesToken');
-        $baseUrl = rtrim(
-            $integration->get('playSmsBaseUrl') ??
-            $this->config->get('playSmsApiBaseUrl') ??
-            self::BASE_URL
-        );
+        $baseUrl = rtrim($integration->get('playSmsBaseUrl'));
         $timeout = $this->config->get('playSmsSendTimeout') ?? self::TIMEOUT;
 
         $fromNumber = $sms->getFromNumber();
