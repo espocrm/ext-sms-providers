@@ -81,7 +81,6 @@ class PlaySmsSender implements Sender
         $webservicesToken = $integration->get('playSmsWebservicesToken');
         $baseUrl = rtrim($integration->get('playSmsBaseUrl'));
         $timeout = $this->config->get('playSmsSendTimeout') ?? self::TIMEOUT;
-
         $fromNumber = $sms->getFromNumber();
 
         if (!$username) {
