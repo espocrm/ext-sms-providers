@@ -91,7 +91,11 @@ class SerwerSmsSender implements Sender
 
         $username = $integration->get('serwerSmsUsername');
         $password = $integration->get('serwerSmsPassword');
-        $sender = $integration->get('serwerSmsSender') ?? '';
+
+        $sender =
+            $sms->getFromNumber() ??
+            $integration->get('serwerSmsSender') ?? '';
+
         $test = $integration->get('serwerSmsTest') ?? false;
         $timeout = $this->config->get('serwerSmsTimeout') ?? self::TIMEOUT;
 
