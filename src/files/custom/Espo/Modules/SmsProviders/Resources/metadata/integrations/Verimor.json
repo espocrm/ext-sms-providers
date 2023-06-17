@@ -1,0 +1,22 @@
+{
+    "view": "views/admin/integrations/edit",
+    "fields": {
+        "verimorUsername": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true,
+            "default": ""
+        },
+        "verimorPassword": {
+            "type": "password",
+            "maxLength": 100,
+            "required": true
+        },
+        "verimorSender": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true,
+            "default": ""
+        }
+    }
+}
