@@ -10,6 +10,7 @@ An installable extension.
 * sms77
 * smstools
 * [SerwerSms](https://dev.serwersms.pl/en/https-api-v2/introduction)
+* [Verimor](https://verimor.com.tr)
 
 ## Setting up
 
