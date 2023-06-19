@@ -20,6 +20,9 @@
         "serwerSmsPassword": "Password",
         "serwerSmsBaseUrl": "Base URL",
         "serwerSmsSender": "Sender Name",
-        "serwerSmsTest": "Test"
+        "serwerSmsTest": "Test",
+        "verimorUsername": "Username (Phone)",
+        "verimorPassword": "Password",
+        "verimorSender": "Sender Name"
     }
 }

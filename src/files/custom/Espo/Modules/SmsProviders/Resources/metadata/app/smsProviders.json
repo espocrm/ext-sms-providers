@@ -13,5 +13,8 @@
     },
     "SerwerSms": {
         "senderClassName": "Espo\\Modules\\SmsProviders\\SerwerSms\\SerwerSmsSender"
+    },
+    "Verimor": {
+        "senderClassName": "Espo\\Modules\\SmsProviders\\Verimor\\VerimorSender"
     }
 }
