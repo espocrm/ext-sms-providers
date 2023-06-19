@@ -4,8 +4,7 @@
         "smstoolsClientId": {
             "type": "varchar",
             "maxLength": 100,
-            "required": true,
-            "default": ""
+            "required": true
         },
         "smstoolsClientSecret": {
             "type": "password",

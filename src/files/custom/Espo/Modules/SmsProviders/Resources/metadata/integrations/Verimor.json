@@ -4,8 +4,7 @@
         "verimorUsername": {
             "type": "varchar",
             "maxLength": 100,
-            "required": true,
-            "default": ""
+            "required": true
         },
         "verimorPassword": {
             "type": "password",
@@ -15,8 +14,7 @@
         "verimorSender": {
             "type": "varchar",
             "maxLength": 100,
-            "required": true,
-            "default": ""
+            "required": true
         }
     }
 }
