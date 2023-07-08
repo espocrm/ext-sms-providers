@@ -1,0 +1,20 @@
+{
+    "view": "views/admin/integrations/edit",
+    "fields": {
+        "gatewayApiToken": {
+            "type": "varchar",
+            "maxLength": 100,
+            "required": true
+        },
+        "gatewayApiBaseUrl": {
+            "type": "varchar",
+            "maxLength": 100,
+            "default": "https://gatewayapi.com/rest/mtsms"
+        },
+        "gatewayApiSender": {
+            "type": "varchar",
+            "maxLength": 100,
+            "default": "EspoCRM"
+        }
+    }
+}

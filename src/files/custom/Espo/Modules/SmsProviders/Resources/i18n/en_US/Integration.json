@@ -23,6 +23,9 @@
         "serwerSmsTest": "Test",
         "verimorUsername": "Username (Phone)",
         "verimorPassword": "Password",
-        "verimorSender": "Sender Name"
+        "verimorSender": "Sender Name",
+        "gatewayApiToken": "API Token",
+        "gatewayApiBaseUrl": "API Url",
+        "gatewayApiSender": "Sender Name"
     }
 }
