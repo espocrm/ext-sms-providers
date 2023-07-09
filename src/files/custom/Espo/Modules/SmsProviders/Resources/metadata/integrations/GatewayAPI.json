@@ -13,7 +13,7 @@
         },
         "gatewayApiSender": {
             "type": "varchar",
-            "maxLength": 100,
+            "maxLength": 15,
             "default": "EspoCRM"
         }
     }
