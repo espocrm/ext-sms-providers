@@ -25,7 +25,7 @@
         "verimorPassword": "Password",
         "verimorSender": "Sender Name",
         "gatewayApiToken": "API Token",
-        "gatewayApiBaseUrl": "API Url",
+        "gatewayApiBaseUrl": "API URL",
         "gatewayApiSender": "Sender Name"
     }
 }
